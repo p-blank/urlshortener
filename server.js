@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 
 // Basic Configuration
-const port = process.env.PORT || 3000;
+const port = 8080;
 
 app.use(cors());
 
@@ -14,11 +14,7 @@ app.get('/', function(req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-// Your first API endpoint
-app.get('/api/hello', function(req, res) {
-  res.json({ greeting: 'hello API' });
-});
-
+app.post('/api/shorturl/new', )
 app.listen(port, function() {
   console.log(`Listening on port ${port}`);
 });
